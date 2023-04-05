@@ -1,9 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 
+interface ApiRequest extends NextApiRequest {
+  body: ENDPOINT_NAMEApiRequest;
+}
+
 const ENDPOINT_NAME = async (
-  req: NextApiRequest,
-  res: NextApiResponse<string | { error: string }>
+  req: ApiRequest,
+  res: NextApiResponse<ENDPOINT_NAMEApiResponse | { error: string }>
 ) => {
   console.log("---ENDPOINT_NAME---");
 
