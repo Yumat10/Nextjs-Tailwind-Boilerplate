@@ -5,11 +5,8 @@ const PAGE_NAME: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>rnnr | Customs</title>
-        <meta
-          name="description"
-          content="Our program makes it super simple to have a one-of-a-kind gear for your brand or event. "
-        />
+        <title>Wagmi | frens</title>
+        <meta name="description" content="To the moon" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main></main>

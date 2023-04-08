@@ -1,12 +1,5 @@
-import {
-  createContext,
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useContext,
-  useState,
-} from 'react';
-import { useMediaQuery } from 'react-responsive';
+import { createContext, ReactNode, useContext } from "react";
+import { useMediaQuery } from "react-responsive";
 
 interface MediaQueryContextInterface {
   isDesktop: boolean;
@@ -24,10 +17,10 @@ export const MediaQueryContextProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const isDesktop = useMediaQuery({ query: '(max-width: 1460px)' });
-  const isLaptop = useMediaQuery({ query: '(max-width: 1024px)' });
-  const isTablet = useMediaQuery({ query: '(max-width: 768px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
+  const isDesktop = useMediaQuery({ query: "(max-width: 1460px)" });
+  const isLaptop = useMediaQuery({ query: "(max-width: 1024px)" });
+  const isTablet = useMediaQuery({ query: "(max-width: 768px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 480px)" });
 
   return (
     <MediaQueryContext.Provider
@@ -47,7 +40,7 @@ export const useMediaQueryContext = (): MediaQueryContextInterface => {
   const context = useContext(MediaQueryContext);
   if (context === undefined) {
     throw new Error(
-      'MediaQueryContext must be within MediaQueryContextProvider'
+      "MediaQueryContext must be within MediaQueryContextProvider"
     );
   }
 
